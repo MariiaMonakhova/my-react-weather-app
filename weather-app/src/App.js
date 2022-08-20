@@ -9,7 +9,7 @@ export default function App() {
       </div>
       <p className="source-link">
         This app is coded by Mariia Monakhova and is{" "}
-        <a href="https://github.com/MariiaMonakhova/react-weather-app">
+        <a href="https://github.com/MariiaMonakhova/my-react-weather-app">
           open-soursed
         </a>
       </p>
