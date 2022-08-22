@@ -1,3 +1,6 @@
+:root {
+  --temperature-color: #ff0073;
+}
 body {
   font-family: "Playfair Display", serif;
   margin: 130px auto;
@@ -23,25 +26,34 @@ h1 {
 .search-area {
   margin-left: 5px;
 }
-form button:hover {
+button,
+.search-button {
+  border: 1.5px solid black;
+}
+.search-button:hover,
+button:hover {
   background: rgb(217, 167, 236);
   opacity: 0.8;
   transition: all 200ms ease-in-out;
 }
+h4,
+.forecast,
+.day {
+  font-family: "Roboto Slab", serif;
+}
 h4 {
   padding: 20px 0 0 5px;
   font-size: 23px;
-  font-family: "Roboto Slab", serif;
   margin-left: 30px;
 }
 .forecast {
   border: solid 1mm #dabbe2;
   padding: 20px;
   margin: 5px;
-  font-family: "Roboto Slab", serif;
 }
 .info,
-.description {
+.description,
+.min-temp {
   opacity: 0.7;
 }
 .day {
@@ -49,7 +61,6 @@ h4 {
   margin: 0 auto;
   margin-bottom: 15px;
   padding-left: 7px;
-  font-family: "Roboto Slab", serif;
 }
 img {
   width: 40px;
@@ -58,8 +69,7 @@ img {
 }
 .main-temperature {
   font-size: 40px;
-  color: #ee69a5;
-  opacity: 0.9;
+  color: var(--temperature-color);
 }
 
 .main-image {
@@ -74,7 +84,7 @@ img {
 }
 .temperatura {
   margin-left: 5px;
-  color: #ee69a5;
+  color: var(--temperature-color);
 }
 .description {
   text-transform: capitalize;
@@ -93,7 +103,6 @@ img {
   font-weight: bold;
 }
 .min-temp {
-  opacity: 0.7;
   margin-left: 7px;
 }
 .forecast-image {

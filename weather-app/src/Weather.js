@@ -3,7 +3,6 @@ import "./Weather.css";
 
 export default function Weather() {
   let weatherData = {
-    //city: `${city}`,
     date: "Tuesday 00:00",
     description: "Cloudy",
     imgUrl: "https://cdn-icons-png.flaticon.com/512/2983/2983922.png",
@@ -37,7 +36,7 @@ export default function Weather() {
             autoComplete="off"
             onChange={changeCity}
           />
-          <input type="submit" value="🔎" />
+          <input type="submit" value="🔎" className="search-button" />
           <button className="location">Current location</button>
         </form>
 
