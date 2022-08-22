@@ -47,6 +47,7 @@ h4 {
   margin-left: 30px;
 }
 .forecast {
+  border-radius: 10px;
   border: solid 1mm #dabbe2;
   padding: 20px;
   margin: 5px;
@@ -56,7 +57,7 @@ h4 {
 .min-temp {
   opacity: 0.7;
 }
-.day {
+.Weather.day {
   border: solid 1mm #dabbe2;
   margin: 0 auto;
   margin-bottom: 15px;
@@ -67,45 +68,45 @@ img {
   position: relative;
   left: 20px;
 }
-.main-temperature {
+.Weather.main-temperature {
   font-size: 40px;
   color: var(--temperature-color);
 }
 
-.main-image {
+.Weather.main-image {
   width: 60px;
   margin: 10px;
 }
 
-.unit {
+.Weather.unit {
   position: relative;
   font-size: 20px;
   top: -14px;
 }
-.temperatura {
+.Weather.temperatura {
   margin-left: 5px;
   color: var(--temperature-color);
 }
-.description {
+.Weather.description {
   text-transform: capitalize;
 }
-.sourse {
+.Weather.sourse {
   padding-left: 20px;
 }
-.box {
+.Weather.box {
   margin-bottom: 5px;
 }
-.sourse-link {
+.Weather.sourse-link {
   text-decoration: none;
   color: #6054e5;
 }
-.max-temp {
+.Weather.max-temp {
   font-weight: bold;
 }
-.min-temp {
+.Weather.min-temp {
   margin-left: 7px;
 }
-.forecast-image {
+.Weather.forecast-image {
   display: block;
   margin: 0 auto;
   margin-top: 18px;

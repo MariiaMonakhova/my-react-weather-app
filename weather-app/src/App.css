@@ -1,6 +1,14 @@
 .App {
   margin: 20px;
 }
+.App p.source-link {
+  margin-top: 8px;
+  margin-left: 60px;
+}
+.App p a {
+  text-decoration: none;
+  color: #6054e5;
+}
 :root {
   --temperature-color: #ff0073;
 }
@@ -98,10 +106,7 @@ img {
 .box {
   margin-bottom: 5px;
 }
-.sourse-link {
-  text-decoration: none;
-  color: #6054e5;
-}
+
 .max-temp {
   font-weight: bold;
 }
