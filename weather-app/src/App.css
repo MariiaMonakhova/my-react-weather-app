@@ -3,7 +3,14 @@
 }
 .App p.source-link {
   margin-top: 8px;
-  margin-left: 60px;
+  margin-left: 10px;
+}
+
+@media (max-width: 800px) {
+  .App p.source-link {
+    margin-top: 8px;
+    margin-left: 60px;
+  }
 }
 .App p a {
   text-decoration: none;
