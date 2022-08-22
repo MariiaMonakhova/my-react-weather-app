@@ -10,7 +10,7 @@ export default function App() {
       <p className="source-link">
         This app is coded by Mariia Monakhova and is{" "}
         <a href="https://github.com/MariiaMonakhova/my-react-weather-app">
-          open-soursed
+          open-sourced
         </a>
       </p>
     </div>
