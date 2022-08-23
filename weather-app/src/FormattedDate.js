@@ -1,9 +1,4 @@
-import React from "react";
-import axios from "axios";
-
 export default function FormattedDate(props) {
-  console.log(props.date);
-
   let days = [
     "Sunday",
     "Monday",
