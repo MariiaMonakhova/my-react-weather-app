@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
-
 import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
-  const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       date: new Date(response.data.dt * 1000),
@@ -24,14 +22,6 @@ export default function Weather(props) {
     });
   }
 
-  function search() {
-    let units = "metric";
-    let apiKey = "0727199221e468420f29d7fe1ea9bf71";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-
-    axios.get(apiUrl).then(handleResponse);
-  }
-
   function handleSubmit(event) {
     event.preventDefault();
     search();
@@ -39,6 +29,14 @@ export default function Weather(props) {
 
   function handleChange(event) {
     setCity(event.target.value);
+  }
+
+  function search() {
+    let units = "metric";
+    let apiKey = "0727199221e468420f29d7fe1ea9bf71";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+
+    axios.get(apiUrl).then(handleResponse);
   }
 
   if (weatherData.ready) {
@@ -52,16 +50,12 @@ export default function Weather(props) {
               placeholder="Search city"
               id="text-city"
               autoComplete="off"
-            />
-            <input
-              type="submit"
-              value="🔎"
-              className="search-button"
               onChange={handleChange}
             />
+            <input type="submit" value="🔎" className="search-button" />
             <button className="location">Current location</button>
           </form>
-          <WeatherInfo data={weatherData} defaultCity="Seoul" />
+          <WeatherInfo data={weatherData} />
           <h4 className="week">5 Day Forecast</h4>
         </div>
       </div>
