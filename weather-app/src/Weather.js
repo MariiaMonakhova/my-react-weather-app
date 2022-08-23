@@ -18,7 +18,7 @@ export default function Weather(props) {
       city: response.data.name,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
-      icon: "https://cdn-icons-png.flaticon.com/512/2983/2983922.png",
+      icon: response.data.weather[0].icon,
     });
   }
 
