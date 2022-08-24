@@ -83,6 +83,11 @@ img {
   font-size: 20px;
   top: -14px;
 }
+.unit a {
+  text-decoration: none;
+  color: var(--temperature-color);
+  opacity: 0.6;
+}
 .Weather.temperatura {
   margin-left: 5px;
   color: var(--temperature-color);

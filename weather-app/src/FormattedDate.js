@@ -3,7 +3,7 @@ export default function FormattedDate(props) {
     "Sunday",
     "Monday",
     "Tuesday",
-    "Wednedday",
+    "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
