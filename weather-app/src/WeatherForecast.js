@@ -17,9 +17,15 @@ export default function WeatherForecast(props) {
       <div className="daily-forecast">
         <h4 className="week">5 Day Forecast</h4>
         <div className="row box">
-          <div className="col-sm-2 day">
-            <WeatherForecastDay day={forecastData[0]} />
-          </div>
+          {forecastData.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col-sm-2 day" key={index}>
+                  <WeatherForecastDay day={dailyForecast} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );
