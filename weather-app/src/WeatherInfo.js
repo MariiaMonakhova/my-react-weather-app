@@ -10,18 +10,18 @@ export default function WeatherInfo(props) {
         Last updated: <FormattedDate date={props.data.date} />{" "}
       </h4>
       <div className="row forecast">
-        <div className="col-4">
+        <div className="col-sm-4">
           <h3>{props.data.city}</h3>
           <p className="description">{props.data.description}</p>
         </div>
-        <div className="col-4 main-temperature">
+        <div className="col-sm-4 main-temperature">
           <span className="main-image">
             <WeatherIcon code={props.data.icon} size={60} />
           </span>
 
           <WeatherTemperature celsius={props.data.temperature} />
         </div>
-        <div className="col-4">
+        <div className="col-sm-4">
           <span className="info">
             <span>Feels like: {props.data.feels}</span>
             <br />
