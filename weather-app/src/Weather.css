@@ -25,10 +25,21 @@ h1 {
 }
 .search-area {
   margin-left: 5px;
+  margin-top: 35px;
+}
+#text-city {
+  width: 250px;
+  height: 35px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 button,
 .search-button {
   border: 1.5px solid black;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  height: 35px;
+  width: 50px;
 }
 .search-button:hover,
 button:hover {
@@ -126,6 +137,12 @@ img {
 }
 
 @media (max-width: 900px) {
+  .search-area {
+    margin-top: 10px;
+  }
+  #text-city {
+    width: 200px;
+  }
   .forecast {
     text-align: center;
   }
@@ -137,6 +154,7 @@ img {
   }
   h4 {
     font-size: 20px;
+    margin-left: 0;
   }
   .temperature {
     font-size: 50px;

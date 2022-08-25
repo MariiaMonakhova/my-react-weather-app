@@ -40,23 +40,27 @@ export default function Weather(props) {
 
     axios.get(apiUrl).then(handleResponse);
   }
-
   if (weatherData.ready) {
     return (
       <div className="Weather">
         <div className="main-background">
-          <h1>Weather Forecast</h1>
-          <form className="search-area" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Search city"
-              id="text-city"
-              autoComplete="off"
-              onChange={handleChange}
-            />
-            <input type="submit" value="🔎" className="search-button" />
-            <button className="location">Current location</button>
-          </form>
+          <div className="row">
+            <div className="col-sm-7">
+              <h1>Weather Forecast</h1>
+            </div>
+            <div className="col-sm-5">
+              <form className="search-area" onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  placeholder="Search city"
+                  id="text-city"
+                  autoComplete="off"
+                  onChange={handleChange}
+                />
+                <input type="submit" value="🔎" className="search-button" />
+              </form>
+            </div>
+          </div>
           <WeatherInfo data={weatherData} />
           <WeatherForecast coords={weatherData.coord} />
         </div>
